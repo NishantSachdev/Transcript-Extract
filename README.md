@@ -22,13 +22,13 @@ When incorporating the entire project, it can become a product that enhances inv
 
 ### How to Use?
 
-_The information is to only use the current state of the project_
+_The information is to only use the current state of the project_ *
 
 - Create a Database in MS SQL Server.
 - Create a new table in that database using - `sql/tbl_TranscriptExtract.sql` file.
 - Download a earning call transcript and save to `input/transcripts` folder or use any existing transcript.
 - Input the DB server config and transcript filename in the config file - `input/config.json`.
-- Run the script `transcript_pdf_to_text.py`.
+- Run the script **`transcript_pdf_to_text.py`**.
 - Check file - `extract.txt` for manual proof reading.
 - Check DB table `{DB_Name}.dbo.TranscriptExtract` for the extracted data.
 
@@ -36,12 +36,12 @@ _The information is to only use the current state of the project_
 
 ### Future Scope 
 
-**Sprint 1** - Extract QNA from listed companies quarterly meetings - Concall Transcripts.
+**Sprint 1** - Extract QNA from listed companies Earning Call Transcripts.
 
 **Sprint 2** - Sentiment Analysis.
 
-**Sprint 3** - Find links in questions and answers of Transcripts for different periods.
+**Sprint 3** - Find links in questions and answers of Transcripts for different periods and other publicly available information.
 
-The code in this repo is a raw start for Sprint 1 part of this project. It excludes optimization and the edge cases taken care of in the next iterations. Currently the project progress is at **Sprint 2** level. I am working with someone for the rest of the sprints. We think it can add value as a product to supplement the process investment management which is why we have decided to keep the rest of the project private.
+The code in this repo is a raw start for Sprint 1 of this project. It excludes optimization and the edge cases taken care of in the next iterations. Currently the project progress is at **Sprint 2** level. I am working with someone for the rest of the sprints. We think it can add value as a product to supplement the process of investment management and analysis which is why we have decided to keep the rest of the project private.
 
 ---------------------------------------------------------------------------------
