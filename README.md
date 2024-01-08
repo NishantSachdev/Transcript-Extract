@@ -42,6 +42,6 @@ _The information is to only use the current state of the project_ *
 
 **Sprint 3** - Find links in questions and answers of Transcripts for different periods and other publicly available information.
 
-The code in this repo is a raw start for Sprint 1 of this project. It excludes optimization and the edge cases taken care of in the next iterations. Currently the project progress is at **Sprint 2** level. I am working with someone for the rest of the sprints. We think it can add value as a product to supplement the process of investment management and analysis which is why we have decided to keep the rest of the project private.
+The code in this repo is a raw start for Sprint 1 of this project. It excludes optimization and the edge cases taken care of in the next iterations. Currently the project progress is at **Sprint 2** level. I am working with someone for the rest of the sprints. We think it can add value as a product to supplement the process of investment management and analysis, which is why we have decided to keep the rest of the project private.
 
 ---------------------------------------------------------------------------------
