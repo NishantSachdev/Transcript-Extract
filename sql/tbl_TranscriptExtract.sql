@@ -20,13 +20,6 @@ CREATE TABLE [dbo].[TranscriptExtract](
 	[QNA_9] [varchar](max) NULL,
 	[QNA_10] [varchar](max) NULL,
 	[QNA_11] [varchar](max) NULL,
-	[QNA_12] [varchar](max) NULL,
- CONSTRAINT [pk_TranscriptExtract] PRIMARY KEY CLUSTERED 
-(
-	[Company_Name] ASC,
-	[Concall_Date] ASC
-)
+	[QNA_12] [varchar](max) NULL
 ) ON [PRIMARY]
 GO
-
-
