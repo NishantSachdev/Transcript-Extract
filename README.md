@@ -29,7 +29,7 @@ _The information is to only use the current state of the project_ *
 - Download a earning call transcript and save to `input/transcripts` folder or use any existing transcript.
 - Input the DB server config and transcript filename in the config file - `input/config.json`.
 - Run the script **`transcript_pdf_to_text.py`**.
-- Check file - `extract.txt` for manual proof reading.
+- Check file - `output/extract.txt` for manual proof reading.
 - Check DB table `{DB_Name}.dbo.TranscriptExtract` for the extracted data.
 
 ---------------------------------------------------------------------------------

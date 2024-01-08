@@ -27,7 +27,7 @@ def main():
     list_question_and_ans = extract_qna(list_text_needed)
     
     logging.info("Creating string of all dialogues to store in a text file for manual proof reading when required...")
-    file_str_question_and_ans = store_all_dialogues(list_question_and_ans)
+    file_str_question_and_ans = store_all_dialogues(list_question_and_ans, config_obj)
     
     logging.info("Finding names of important company representators...")
     moderator, ceo, cfo, relations = find_names_of_imp_company_representators(list_full_pdf_text)
@@ -118,11 +118,11 @@ def extract_qna(list_text_needed):
 
 
 # Create string of all dialogues to store in a text file for manual proof reading during development
-def store_all_dialogues(list_question_and_ans):
+def store_all_dialogues(list_question_and_ans, config_obj):
     file_str_question_and_ans = ""
     for x in list_question_and_ans:
         file_str_question_and_ans += str(x) + "\n\n"
-    text_file = open(r"extract.txt", "w")
+    text_file = open(f"output/{config_obj['OUTPUT_TEXTFILE']}", "w")
     text_file.write(file_str_question_and_ans)
     text_file.close()
 
@@ -211,17 +211,17 @@ def db_connection(conn_str):
         logging.error(f"Error while connecting to DB: {e}")
 
 
-# Insert data into DB part 1
+# Insert data into DB part 1 and retrieve record ID
 def insert_data_into_db_1(compamy_name, concall_date, moderator, ceo, cfo, relations, qna_dict, db_name, conn, cursor):
     try: 
         sql1 = f"""
-            INSERT INTO {db_name}.dbo.TranscriptExtract(Company_Name, Concall_Date, Moderator, ceo, cfo, relations, qna_1, qna_2, qna_3, qna_4)
+            INSERT INTO {db_name}.dbo.TranscriptExtract(Company_Name, Concall_Date, Moderator, CEO, CFO, Relations, qna_1, qna_2, qna_3, qna_4)
             VALUES ('{compamy_name}', '{concall_date}', '{moderator}', '{ceo}', '{cfo}', '{relations}', '{qna_dict['qna1']}', '{qna_dict['qna2']}', '{qna_dict['qna3']}', '{qna_dict['qna4']}')
         """
 
         id_sql = f""" 
-            SELECT top 1 id FROM {db_name}.dbo.TranscriptExtract
-            ORDER BY id desc
+            SELECT top 1 ID FROM {db_name}.dbo.TranscriptExtract
+            ORDER BY ID desc
         """
 
         cursor.execute(sql1)

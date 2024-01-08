@@ -2,5 +2,6 @@
     "DRIVER_NAME" : "SQL SERVER",
     "SERVER_NAME" : "",
     "DATABASE_NAME" : "MarketResearch",
-    "FILENAME" : "LaurusLabs_20221027.pdf"
+    "FILENAME" : "VRLLogistics_20230131.pdf",
+    "OUTPUT_TEXTFILE" : "extract.txt"
 }
